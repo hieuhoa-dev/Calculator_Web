@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- Đặt web về mặt định, bỏ các khoản trắng -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+            integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./style.css">
+    
+        <!-- Font chữ -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+    
+        <!-- icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+<body>
+    <form name="calc" class="calculator">
+        <div class="screen">
+            <input type="text" class="display" name="display" readonly>
+            <input type="text" class="result" name="result" readonly>
+        </div>
+        <span class="btn" onclick="handleClear()">AC</span>   
+        <span class="btn" onclick="document.calc.display.value += '('">(</span>
+        <span class="btn" onclick="document.calc.display.value += ')'">)</span>
+        <span class="btn btn_calc" onclick="document.calc.display.value += '/'"><i class="fa-solid fa-divide"></i></span>
+        <span class="btn" onclick="document.calc.display.value += '*'">7</span>
+        <span class="btn" onclick="document.calc.display.value += '8'">8</span>
+        <span class="btn" onclick="document.calc.display.value += '9'">9</span>
+        <span class="btn btn_calc" onclick="document.calc.display.value += '*'"><i class="fa-solid fa-xmark"></i></span>
+        <span class="btn" onclick="document.calc.display.value += '4'">4</span>
+        <span class="btn" onclick="document.calc.display.value += '5'">5</span>
+        <span class="btn" onclick="document.calc.display.value += '6'">6</span>
+        <span class="btn btn_calc" onclick="document.calc.display.value += '-'"><i class="fa-solid fa-minus"></i></span>
+        <span class="btn" onclick="document.calc.display.value += '1'">1</span>
+        <span class="btn" onclick="document.calc.display.value += '2'">2</span>
+        <span class="btn" onclick="document.calc.display.value += '3'">3</span>
+        <span class="btn btn_calc" onclick="document.calc.display.value += '+'"><i class="fa-solid fa-plus"></i></span>
+        <span class="btn" onclick="document.calc.display.value += '.'">.</span>
+        <span class="btn" onclick="document.calc.display.value += '0'">0</span>
+        <span class="btn" onclick="handleBack()"><i class="fa-solid fa-delete-left"></i></span>
+        <span class="btn equal" onclick="handleCalculator() += '='">=</span>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
